@@ -1,5 +1,6 @@
 package com.rjw.shortLink.admin.dao.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
@@ -22,8 +23,11 @@ public class UserDo {
     private String realName;
     private String phone;
     private String mail;
-    private Integer  deletionTime;
+    @TableField(fill = FieldFill.UPDATE)
+    private Integer deletionTime;
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
-    private Date  updateTime;
+    @TableField(fill = FieldFill.UPDATE)
+    private Date updateTime;
     private Integer delFlag;
 }

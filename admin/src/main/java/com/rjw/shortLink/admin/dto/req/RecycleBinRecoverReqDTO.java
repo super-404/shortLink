@@ -15,20 +15,24 @@
  * limitations under the License.
  */
 
-package com.rjw.shortLink.admin.dto.resp;
+package com.rjw.shortLink.admin.dto.req;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-
+/**
+ * 回收站恢复功能
+ * 公众号：马丁玩编程，回复：加群，添加马哥微信（备注：link）获取项目资料
+ */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class UserLoginRespDTO {
+public class RecycleBinRecoverReqDTO {
 
     /**
-     * 用户Token
+     * 分组标识
      */
-    private String token;
+    private String gid;
+
+    /**
+     * 全部短链接
+     */
+    private String fullShortUrl;
 }
